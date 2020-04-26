@@ -1,19 +1,21 @@
 package sample;
 
+import javafx.scene.paint.Color;
+
 public class Blox {
     String type;
-    String color;
-    public Blox(String type, String color) {
-       this.type = type;
-       this.color = color;
+    Color color;
+    public Blox(String type, Color color) {
+        this.type = type;
+        this.color = color;
     }
     public String getType() {
         return type;
     }
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
     public void setType(String type) {

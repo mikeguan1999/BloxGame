@@ -20,6 +20,9 @@ public class BloxWorld {
     public Blox[][] getWorld() {
         return world;
     }
+    public Blox getBloxAt(int i, int j) {
+        return world[i][j];
+    }
     public void setBlox(int x, int y, Blox blox) {
         world[x][y] = blox;
     }

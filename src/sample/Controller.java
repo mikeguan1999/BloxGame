@@ -16,6 +16,7 @@ public class Controller implements Initializable {
     private Canvas canvas;
     private GraphicsContext gc;
     private int blockSize;
+    private BloxWorld world;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -27,20 +28,26 @@ public class Controller implements Initializable {
 
         gc.setFill(Color.AQUAMARINE);
 
-        drawSquare(0,0);
-        drawSquare(1, 1);
-        drawSquare(0,1);
-        drawSquare(1,0);
+        world = new BloxWorld(20, 20);
+        world.setBlox(0,0, new Blox("me", Color.RED));
+        world.setBlox(5, 10, new Blox("something", Color.DARKORANGE));
 
-        drawSquare(5,5);
-
+        drawBoard();
     }
 
-    public void drawSquare(int row, int col) {
-        gc.fillRect(blockSize * row + 1, blockSize * col + 1, blockSize - 1, blockSize - 1);
+    public void drawSquare(int row, int col, Blox blox) {
+        if (blox != null) {
+            gc.setFill(blox.getColor());
+            gc.fillRect(blockSize * row + 1, blockSize * col + 1, blockSize - 1, blockSize - 1);
+        }
     }
 
     public void drawBoard() {
+        for (int i = 0; i < world.getHeight() ; i++) {
+            for (int j = 0; j < world.getWidth(); j++) {
+               drawSquare(i, j, world.getBloxAt(i, j));
+            }
+        }
 
     }
 }
