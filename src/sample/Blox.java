@@ -5,6 +5,8 @@ import javafx.scene.paint.Color;
 public class Blox {
     String type;
     Color color;
+
+
     public Blox(String type, Color color) {
         this.type = type;
         this.color = color;

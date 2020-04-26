@@ -6,7 +6,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <MenuBar prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -28,6 +27,6 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <Canvas fx:id="canvas" height="370.0" layoutY="30.0" width="600.0" />
+        <Canvas fx:id="canvas" height="800.0" layoutY="30.0" width="800.0" />
     </children>
 </AnchorPane>

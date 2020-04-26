@@ -5,6 +5,10 @@ public class BloxWorld {
     int height;
     Blox[][] world;
 
+    public enum Direction {
+        left, right, up, down
+    }
+
     public BloxWorld(int width, int height) {
         this.width = width;
         this.height = height;
