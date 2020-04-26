@@ -23,3 +23,4 @@ public class Blox {
         System.out.println(type.charAt(0));
     }
 }
+
