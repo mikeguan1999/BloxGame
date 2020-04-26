@@ -18,7 +18,7 @@ public class Main extends Application {
         scene.addEventHandler(KeyEvent.ANY, (key) -> {
             System.out.print("hihihi");
             if(key.getCode()== KeyCode.A) {
-                System.out.println("You pressed left");
+                System.out.println("You pressed LEFT");
             }
             if (key.getCode() == KeyCode.RIGHT) {
                 System.out.println("You pressed right");
